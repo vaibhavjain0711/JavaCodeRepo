@@ -7,15 +7,15 @@ pipeline {
                 bat 'javac -version'
             }
         }
-        stage('Compiling') {
+        stage('build') {
             steps {
-                bat 'javac Hello.java'
+                bat 'mvn clean package'
             }
         }
         
-        stage('Running') {
+        stage('deploying') {
             steps {
-                bat 'java Hello'
+                bat 'deploying process PENDING'
             }
         }
     }
