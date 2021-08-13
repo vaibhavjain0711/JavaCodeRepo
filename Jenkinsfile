@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checking Version') {
             steps {
-                bat 'javac -version'
+                bat 'java -version'
             }
         }
         stage('Compiling') {
